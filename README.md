@@ -8,7 +8,7 @@
 ## About me 💻
 I am a Systems Engineering student currently emphasizing data management at the University of San Buenaventura. Since the 7th semester I have started the emphasis of the career in data management for the knowledge of the value of data and everything that can be done with it, I am passionate about it and it caught my attention.
 
-![Login](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.crehana.com%2Fblog%2Fdata-analitica%2Fcientifico-de-datos%2F&psig=AOvVaw3H50R35ZOJJdGeW1J9zUcZ&ust=1631676114184000&source=images&cd=vfe&ved=0CAkQjRxqFwoTCKDhqazB_fICFQAAAAAdAAAAABAD)
+![Login](https://yyb7613mjr31k8vxr4692ftk-wpengine.netdna-ssl.com/wp-content/uploads/2020/09/d6aa5176-statistics-for-data-science-courses.gif)
 ---
 
 ## Courses 📋
