@@ -32,4 +32,50 @@ print(ratings)
 ratings.reverse() #Metodo para organizarlo de mayor a menor
 print(ratings)
 
+###############################################################################
+
 ##CREACION DE CLASES
+#Las clases tienen atributos y metodos
+#Despues podemos crear diferentes instancias de la clase creada 
+
+#Para este curso de Python se pondra object dentro de los parentesis
+#Object es la clase madre de Circle
+class Circle (object): #----Se define la clase
+  kind = "figure" # class variable shared by all instances
+ #La funcion _init_ es un metodo o contructor espacial para inicializar los atributos de los datos (the data atributes)  
+  def __init__(self,radius,color): #---Se crea la contructora de la clase y se inicializan cada isntancia de la clase
+ #El parametro self se referencia a la instancia de la clase recien creada (Similar a this de Java)
+        self.radius=radius;
+        self.color=color;
+  def addRaduis(self,radius):
+      self.radius=self.radius+radius
+  #def drawCircle(self):
+      
+      
+      
+#Object es la clase madre de Rectangule
+class Rectangule (object): #----Se define la clase
+ #La funcion _init_ es un metodo o contructor espacial para inicializar los atributos de los datos (the data atributes)  
+     def __init__(self,color,height,width): #---Se crea la contructora de la clase y se inicializan cada isntancia de la clase
+ #El parametro self se referencia a la instancia de la clase recien creada (Similar a this de Java)
+        self.color=color;
+        self.height=height;
+        self.width=width;
+    
+BlueCircle=Circle(10,"Blue") #Tambien se puede BlueCircle=Circle(color="Blue",radius=10)
+
+BlueCircle.color
+BlueCircle.color="Light Blue"
+BlueCircle.addRaduis(10)
+print(BlueCircle.radius)
+
+RedCircle=Circle(5,"Red")
+RedCircle.radius
+RedCircle.kind
+
+WhiteRectangule=Rectangule("White", 2, 2)
+WhiteRectangule.height
+WhiteRectangule.color="Gray"
+
+#Para ver lo que esta asociado a la clase (Clases, metodos, entre otros)
+dir(BlueCircle)
