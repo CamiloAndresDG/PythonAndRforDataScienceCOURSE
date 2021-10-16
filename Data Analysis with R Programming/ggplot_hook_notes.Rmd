@@ -1,0 +1,141 @@
+---
+title: "ggplot_hook"
+author: "Camilo"
+date: "10/15/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+## Setting up my environment
+Notes: setting up my R enviroment by loading the 'tidyverse' and 'palmer penguins' packages
+
+```{r loading packages}
+library(ggplot2)
+library(palmerpenguins)
+```
+
+```{r}
+ggplot(data=penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g)) 
+#El unico problema es que no podemos saber a que raza de pinguinos se refiere
+
+```
+
+```{r}
+ggplot(data=penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,color=species))
+#Ahora muestra a que se especie hace referencia cada punto con colores
+```
+```{r}
+ggplot(data=penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,shape=species))
+#Ahora muestra a que se especie hace referencia cada punto con figuras
+```
+```{r}
+ggplot(data=penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,shape=species,color=species))
+#Ahora muestra a que se especie hace referencia cada punto con figuras y colores
+```
+```{r}
+ggplot(data=penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,shape=species,color=species,size=species))
+#Ahora muestra a que se especie hace referencia cada punto con figuras y colores y diferentes tamaños
+```
+
+```{r}
+ggplot(data=penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g),color="purple")
+#Ahora muestra las especies con un color preseleccionado
+```
+
+```{r}
+ggplot(data=penguins)+
+  geom_smooth(mapping = aes(x=flipper_length_mm,y=body_mass_g),color="purple")
+#Ahora muestra la grafica pero en linea
+```
+
+```{r}
+ggplot(data=penguins)+
+  geom_smooth(mapping = aes(x=flipper_length_mm,y=body_mass_g),color="purple")+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g)) 
+#combina grafica de linea con puntos
+```
+
+```{r}
+
+```
+
+```{r}
+ggplot(data=penguins)+
+  geom_smooth(mapping = aes(x=flipper_length_mm,y=body_mass_g,linetype=species),color="purple")
+#Ahora muestra la grafica pero en linea por cada raza de pinguino
+```
+
+```{r}
+ggplot(data=penguins)+
+  geom_jitter(mapping = aes(x=flipper_length_mm,y=body_mass_g,linetype=species),color="purple")
+#Con geom_jitter
+```
+
+```{r}
+#AHORA CON DIMONDS
+ggplot(data=diamonds)+
+  geom_bar(mapping=aes(x=cut))
+#Ahora muestra en grafico de barras
+```
+
+```{r}
+ggplot(data=diamonds)+
+  geom_bar(mapping=aes(x=cut,color=cut))
+#Ahora muestra en grafico de barras con diferentes colores por fuera
+```
+
+```{r}
+ggplot(data=diamonds)+
+  geom_bar(mapping=aes(x=cut,fill=cut))
+#Ahora muestra en grafico de barras con diferentes colores por dentro
+```
+
+```{r}
+ggplot(data=diamonds)+
+  geom_bar(mapping=aes(x=cut,fill=clarity))
+#Con otro valor de la tabla, teniendo en cuenta el corte
+```
+
+```{r}
+
+#+FACET_WRAP
+ggplot(data=penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,shape=species,color=species))+
+  facet_wrap(~species)
+#Se divide por especies
+```
+
+```{r}
+
+ggplot(data=diamonds)+
+  geom_bar(mapping = aes(x=color,fill=cut))+
+  facet_wrap(~cut)
+#se divido por color y corte
+```
+
+```{r}
+ggplot(data=penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,color=species))+
+  facet_wrap(sex~species)
+#Se divide por sexo
+```
+
+```{r}
+ggplot(data=penguins)+
+  geom_point(mapping = aes(x=flipper_length_mm,y=body_mass_g,color=species))+
+  facet_wrap(~sex)
+```
+
+
+
+
+
+
+
